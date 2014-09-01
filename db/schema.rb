@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140901015827) do
+ActiveRecord::Schema.define(version: 20140901064508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "items", force: true do |t|
     t.text     "name"
-    t.decimal  "price"
+    t.integer  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

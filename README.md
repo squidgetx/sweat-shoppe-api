@@ -12,7 +12,8 @@ A demo API can be found (here)[young-basin-6053.herokuapp.com]
 * `/items/find_by_name/:term` returns all items whose names contain the given term.
   *Coming soon: trigram fuzzy search*
 * `/items/find_by_price/:lower/:upper` returns a set of items whose prices fall
-  within the given bound
+  within the given bound **Note that these prices must be denoted in
+cents**
 
 #### To be implemented
 (Route names subject to change)

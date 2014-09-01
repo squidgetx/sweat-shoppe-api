@@ -1,6 +1,7 @@
 class Item < ActiveRecord::Base
   scope :price_bracket, lambda { |lower, upper| where('price <= ? AND price >= ?',upper, lower) }
   scope :less_than, lambda { |upper| where('price <= ?', upper).order('price DESC') }
+
   def self.array_price arr
       total = 0
       arr.each do |i|
@@ -9,7 +10,7 @@ class Item < ActiveRecord::Base
       total
   end
 
-  def self.price_group lower, upper
+  def self.first_fit_price_group lower, upper
     # Find all combinations of items such that the sum of their
     # prices falls within the range of lower and upper
     #
