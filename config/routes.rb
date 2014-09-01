@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'items/find_by_name/:term' => 'items#find_by_name'
   get 'items/find_by_price/:lower/:upper' => 'items#find_by_price'
+  get 'items/find_group_by_price/:lower/:upper' => 'items#find_group_by_price'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

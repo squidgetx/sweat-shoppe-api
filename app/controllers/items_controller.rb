@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.order('price')
+    @items = Item.all
 
     render json: @items
   end
@@ -23,8 +23,8 @@ class ItemsController < ApplicationController
   end
 
   def find_group_by_price
-    lower = params[:lower]
-    upper = params[:upper]
+    lower = params[:lower].to_i
+    upper = params[:upper].to_i
     @items = Item.price_group(lower, upper)
     render json: @items
   end

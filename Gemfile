@@ -12,6 +12,7 @@ gem 'pg'
 gem 'textacular'
 gem 'rails_12factor', group: :production
 gem 'unicorn'
+gem 'pry-byebug'
 
 
 # To use ActiveModel has_secure_password
