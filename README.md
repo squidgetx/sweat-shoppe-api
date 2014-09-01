@@ -7,19 +7,13 @@ A demo API can be found (here)[young-basin-6053.herokuapp.com]
 #### Implemented
 
 * `/items` returns all items in the server catalog in a JSON array
-* `/items/:id` returns a single item with the matched id. *At risk of
-  deprecation, since no one will be looking up items by id really* 
 * `/items/find_by_name/:term` returns all items whose names contain the given term.
   *Coming soon: trigram fuzzy search*
 * `/items/find_by_price/:lower/:upper` returns a set of items whose prices fall
-  within the given bound **Note that these prices must be denoted in
+  within the given bound, sorted in ascending order by price. **Note that these prices must be denoted in
 cents**
-
-#### To be implemented
-(Route names subject to change)
-
-* `/items/prices/:lower/:upper` returns a set of item **arrays**, where
-  the sum of the prices in each array falls within the given bound
+* `/items/find_under_price/:upper` returns a set of items under the
+  given price, sorted in ascending order by price.
 
 #### Item spec
 * Currently the Item JSON only supports the following keys:
