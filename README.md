@@ -19,9 +19,7 @@ cents**
 * Currently the Item JSON only supports the following keys:
     * `id:integer`
     * `name:string`
-    * `price:decimal`
-    * `created_at:datetime` *At risk of deprecation*
-    * `updated_at:datetime` *At risk of deprecation*
+    * `price:integer` *Note this is in cents*
 
 ### Setting up Postgres for development
 * Install Postgres and lib/devel packages using brew, apt, yum, or
