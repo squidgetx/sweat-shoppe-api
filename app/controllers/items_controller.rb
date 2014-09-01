@@ -7,12 +7,21 @@ class ItemsController < ApplicationController
     render json: @items
   end
 
-  def find
+  def find_by_name
     term = params[:term]
     @item = Item.basic_search(term)
 
     render json: @item
   end
+
+  def find_by_price
+    lower = params[:lower]
+    upper = params[:upper]
+    @items = Item.price_bracket(lower,upper)
+
+    render json: @items
+  end
+
 
   # GET /items/1
   # GET /items/1.json
