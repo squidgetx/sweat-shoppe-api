@@ -9,15 +9,14 @@ A demo API can be found (here)[young-basin-6053.herokuapp.com]
 * `/items` returns all items in the server catalog in a JSON array
 * `/items/:id` returns a single item with the matched id. *At risk of
   deprecation, since no one will be looking up items by id really* 
-* `/find/:term` returns all items whose names contain the given term.
-  *Coming soon: trigram fuzzy search* *Route name subject to change in
-favor of items/find/:term*
+* `/items/find_by_name/:term` returns all items whose names contain the given term.
+  *Coming soon: trigram fuzzy search*
+* `/items/find_by_price/:lower/:upper` returns a set of items whose prices fall
+  within the given bound
 
 #### To be implemented
 (Route names subject to change)
 
-* `/items/price/:lower/:upper` returns a set of items whose prices fall
-  within the given bound
 * `/items/prices/:lower/:upper` returns a set of item **arrays**, where
   the sum of the prices in each array falls within the given bound
 
