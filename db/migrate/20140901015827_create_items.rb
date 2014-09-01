@@ -2,9 +2,7 @@ class CreateItems < ActiveRecord::Migration
   def change
     create_table :items do |t|
       t.text :name
-      t.decimal :price
-
-      t.timestamps
+      t.integer :price
     end
   end
 end
