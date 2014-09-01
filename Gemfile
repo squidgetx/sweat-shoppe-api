@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
+
 gem 'rails', '4.1.5'
 
 gem 'rails-api'
@@ -8,7 +10,8 @@ gem 'spring', :group => :development
 
 gem 'pg'
 gem 'textacular'
-
+gem 'rails_12factor', group: :production
+gem 'unicorn'
 
 
 # To use ActiveModel has_secure_password
