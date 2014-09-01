@@ -8,7 +8,8 @@ class ItemsController < ApplicationController
   end
 
   def find
-    @item = Item.find_by_name(params[:term])
+    term = params[:term]
+    @item = Item.basic_search(term)
 
     render json: @item
   end
