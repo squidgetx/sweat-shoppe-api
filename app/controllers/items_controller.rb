@@ -7,6 +7,12 @@ class ItemsController < ApplicationController
     render json: @items
   end
 
+  def find
+    @item = Item.find_by_name(params[:term])
+
+    render json: @item
+  end
+
   # GET /items/1
   # GET /items/1.json
   def show
