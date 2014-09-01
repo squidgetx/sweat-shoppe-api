@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+item_names = ['Starbucks Coffee','Chobani Yogurt','Coconut Water','Doritos Nachos', 'Crystal Meth', 'Milk Chug', 'Hummus', 'Avocado', 'Macbook Air','Grimy T-shirt', 'Ramen noodles']
+
+10.times do
+  Item.create(name: item_names.sample, price: rand*100)
+end
